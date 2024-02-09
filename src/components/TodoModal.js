@@ -40,9 +40,11 @@ function TodoModal({ type, modalOpen, setModalOpen, todo }) {
     if (type === "update" && todo) {
       setTitle(todo.title);
       setStatus(todo.status);
+      setDescription(todo.description);
     } else {
       setTitle("");
       setStatus("incomplete");
+      setDescription("");
     }
   }, [type, todo, modalOpen]);
 
